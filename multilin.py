@@ -35,8 +35,8 @@ y=df.iloc[:,3].values
 
 #transforming categorical input features to numerical form
 from sklearn.preprocessing import LabelEncoder
-le = LabelEncoder()
-label = le.fit_transform(df['region'])
+le = LabelEncoder() #In this data we have categorical input feature which is to be converted into discrete using labelencoder
+label = le.fit_transform(df['region']) #these are categorical data values
 label2=le.fit_transform(df['smoker'])
 label3=le.fit_transform(df['sex'])
 df.drop('smoker',axis=1,inplace=True)
